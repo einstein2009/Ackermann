@@ -45,7 +45,7 @@ unsigned int memoizeAcker(unsigned int m, unsigned int n) {
 		return helperMemory[m][n];
 	}
 	
-	else {
+	if (m > 0 && n > 0) {
 		cout << "Else was called and m = " << m << " n = " << n << endl;
 		helperMemory[m][n] = memoizeAcker(m - 1, memoizeAcker(m, n - 1));
 		return helperMemory[m][n];
