@@ -8,7 +8,7 @@
 using namespace std;
 
 
-unsigned int helperMemory[4][100];
+//unsigned int helperMemory[4][100];
 //unsigned int memoizeAcker(unsigned int m, unsigned int n);
 
 
@@ -61,14 +61,14 @@ int main()
 {
 	unsigned int m;
 	unsigned int n;
-
+/*
 	for (int i = 0; i < 5; i++) {
 		for (int l = 0; l < 101; l++) {
 			helperMemory[i][l] = { 0 };
 		}
 	}
 
-/*
+
 	//Top 3 numbers to find
 	cout << "Some values for the Ackermann function" << endl << endl;
 	m = 3;	
