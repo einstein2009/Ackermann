@@ -9,23 +9,28 @@ using namespace std;
 
 
 unsigned int helperMemory[4][100];
-unsigned int memoizeAcker(unsigned int m, unsigned int n);
+//unsigned int memoizeAcker(unsigned int m, unsigned int n);
 
-/*
-//int Acker(int m, int n);
+
+int Acker(int m, int n);
 
  int Acker( int m,  int n) {
 
+	    //cout << "memoizeAcker Initiated and m = " << m << " n = " << n << endl;
 	if (m == 0) {
+		//cout << "First if (m==0) called and m = " << m << " n = " << n << endl;
 		return n + 1;
 	}
-	if (m > 0 && n == 0) {
+	if (n == 0) {
+		//cout << "Second if (n==0) was called and m = " << m << " n = " << n << endl;
 		return Acker(m - 1, 1);
 	}
 	if (m > 0 && n > 0)
+		//cout << "Third if (m > 0 && n > 0) was called and m = " << m << " n = " << n << endl;
 		return Acker(m - 1, Acker(m, n - 1));
 }
-*/
+
+/*
 unsigned int memoizeAcker(unsigned int m, unsigned int n) {
 
 	//TODO: Save values in an array to be read back in time of need.
@@ -51,7 +56,7 @@ unsigned int memoizeAcker(unsigned int m, unsigned int n) {
 		return helperMemory[m][n];
 	}
 }
-
+*/
 int main()
 {
 	unsigned int m;
@@ -80,7 +85,7 @@ int main()
 	//Running through the list of possible options from 0 to 4 for m and from 0 to 20 for n.
 	for (m = 0; m < 5; m++) {
 		for (n = 0; n < 21; n++) {
-			cout << "\nAckermann(" << m << ", " << n << ") = " << memoizeAcker(m, n) << endl << endl;
+			cout << "\nAckermann(" << m << ", " << n << ") = " << Acker(m, n) << endl << endl;
 		}
 		cout << endl;
 	}
